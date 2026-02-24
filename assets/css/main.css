@@ -200,6 +200,52 @@ footer {
   background: #e04b4b
 }
 
+.points-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.points-table th, .points-table td {
+  border: 1px solid #333;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.points-table th {
+  background-color: #1a1a1a;
+  color: #ff5c5c;
+}
+
+.points-table tr:nth-child(even) {
+  background-color: rgba(255, 92, 92, 0.05);
+}
+
+.points-table tr:hover {
+  background-color: rgba(255, 92, 92, 0.1);
+}
+
+.back-button-wrapper {
+  margin: 20px 0;
+}
+
+.back-button {
+  background: #ff5c5c;
+  color: #111;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.back-button:hover {
+  background: #e04b4b;
+}
+
 @keyframes fadeInTitle {
   from {
     opacity: 0;
