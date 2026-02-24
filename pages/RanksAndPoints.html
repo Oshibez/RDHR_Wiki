@@ -95,32 +95,32 @@
     </footer>
 
     <script>
-        function calculatePPS() {
-            const trashBox = document.getElementById("trashBox").checked
-            const genTemp = document.getElementById("genTemp").checked
-            const turbineTemp = document.getElementById("turbineTemp").checked
-            const hydraulicPump = document.getElementById("hydraulicPump").checked
-            const autoExcitation = document.getElementById("autoExcitation").checked
-            const tailwaterBonus = document.getElementById("tailwaterBonus").checked
-            const demandMet = document.getElementById("demandMet").checked
+            function calculatePPS() {
+                const trashBox = document.getElementById("trashBox").checked
+                const genTemp = document.getElementById("genTemp").checked
+                const turbineTemp = document.getElementById("turbineTemp").checked
+                const hydraulicPump = document.getElementById("hydraulicPump").checked
+                const autoExcitation = document.getElementById("autoExcitation").checked
+                const tailwaterBonus = document.getElementById("tailwaterBonus").checked
+                const demandMet = document.getElementById("demandMet").checked
 
-            if (!demandMet) {
-                document.getElementById("ppsResult").innerText = "Points per second: 0 (Demand not met)"
-                return
+                if (!demandMet) {
+                    document.getElementById("ppsResult").innerText = "Points per second: 0 (Demand not met)"
+                    return
+                }
+
+                let pps = 1.38
+
+                if (autoExcitation) pps *= 0.83
+                if (trashBox) pps *= 0.92
+                if (turbineTemp) pps *= 0.83
+                if (hydraulicPump) pps *= 0.83
+                if (genTemp) pps *= 0.92
+                if (tailwaterBonus) pps *= 1.15
+
+                document.getElementById("ppsResult").innerText =
+                    "Points per second: " + pps.toFixed(2) + "/s"
             }
-
-            let pps = 1.38
-
-            if (autoExcitation) pps *= 0.83
-            if (trashBox) pps *= 0.92
-            if (turbineTemp) pps *= 0.83
-            if (hydraulicPump) pps *= 0.83
-            if (genTemp) pps *= 0.92
-            if (tailwaterBonus) pps *= 1.15
-
-            document.getElementById("ppsResult").innerText =
-                "Points per second: " + pps.toFixed(2) + "/s"
-        }
     </script>
 
 </body>
