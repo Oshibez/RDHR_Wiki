@@ -3,15 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Temp Name Wiki</title>
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <title>RDHR Wiki - Ranks And Points</title>
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
 
-    <header class="hero">s
+    <header class="hero">
         <div class="hero-overlay"></div>
-        <img id="hero-img" src="/assets/images/Banner2.png" alt="Banner" />
+        <img id="hero-img" src="assets/images/Banner2.png" alt="Banner">
         <div class="hero-content">
             <div class="hero-left">
                 <h1>Ranks And Points</h1>
@@ -21,34 +21,61 @@
     </header>
 
     <div class="container">
+
+        <div style="margin:20px 0;">
+            <button onclick="history.back()" style="background:#ff5c5c;color:#111;border:none;padding:10px 20px;border-radius:5px;cursor:pointer;font-weight:bold;">
+                ← Back
+            </button>
+        </div>
+
         <div class="cards-wrapper">
             <div class="cards" id="ranks-points-container">
                 <div class="card highlight">
+
                     <h3>Ranks & Points</h3>
-                    <table class="points-table">
+
+                    <table style="width:100%;border-collapse:collapse;color:white;">
                         <thead>
                             <tr>
-                                <th>Rank</th>
-                                <th>Points</th>
-                                <th>Notes</th>
+                                <th style="border:1px solid #333;padding:8px;background:#1a1a1a;color:#ff5c5c;">Rank</th>
+                                <th style="border:1px solid #333;padding:8px;background:#1a1a1a;color:#ff5c5c;">Points</th>
+                                <th style="border:1px solid #333;padding:8px;background:#1a1a1a;color:#ff5c5c;">Notes</th>
                             </tr>
                         </thead>
                         <tbody>
-                           <tr><td>Manager</td><td>300k</td><td></td></tr>
-          <tr><td>Central Control Room Operator (CCRO)</td><td>150k</td><td></td></tr>
-          <tr><td>Senior Supervisor</td><td>75k</td><td>+ Laser Pointer</td></tr>
-          <tr><td>Supervisor</td><td>25k</td><td>+ Intercom + Supervisor Room</td></tr>
-          <tr><td>Senior Operator</td><td>10k</td><td></td></tr>
-          <tr><td>Operator</td><td>5k</td><td></td></tr>
-          <tr><td>Junior Operator</td><td>2k</td><td></td></tr>
-          <tr><td>Trainee</td><td>500</td><td></td></tr>
-          <tr><td>Visitor</td><td>0</td><td></td></tr>
+                            <tr><td style="border:1px solid #333;padding:8px;">Manager</td><td style="border:1px solid #333;padding:8px;">300k</td><td style="border:1px solid #333;padding:8px;"></td></tr>
+                            <tr><td style="border:1px solid #333;padding:8px;">Central Control Room Operator (CCRO)</td><td style="border:1px solid #333;padding:8px;">150k</td><td style="border:1px solid #333;padding:8px;"></td></tr>
+                            <tr><td style="border:1px solid #333;padding:8px;">Senior Supervisor</td><td style="border:1px solid #333;padding:8px;">75k</td><td style="border:1px solid #333;padding:8px;">+ Laser Pointer</td></tr>
+                            <tr><td style="border:1px solid #333;padding:8px;">Supervisor</td><td style="border:1px solid #333;padding:8px;">25k</td><td style="border:1px solid #333;padding:8px;">+ Intercom + Supervisor Room</td></tr>
+                            <tr><td style="border:1px solid #333;padding:8px;">Senior Operator</td><td style="border:1px solid #333;padding:8px;">10k</td><td style="border:1px solid #333;padding:8px;"></td></tr>
+                            <tr><td style="border:1px solid #333;padding:8px;">Operator</td><td style="border:1px solid #333;padding:8px;">5k</td><td style="border:1px solid #333;padding:8px;"></td></tr>
+                            <tr><td style="border:1px solid #333;padding:8px;">Junior Operator</td><td style="border:1px solid #333;padding:8px;">2k</td><td style="border:1px solid #333;padding:8px;"></td></tr>
+                            <tr><td style="border:1px solid #333;padding:8px;">Trainee</td><td style="border:1px solid #333;padding:8px;">500</td><td style="border:1px solid #333;padding:8px;"></td></tr>
+                            <tr><td style="border:1px solid #333;padding:8px;">Visitor</td><td style="border:1px solid #333;padding:8px;">0</td><td style="border:1px solid #333;padding:8px;"></td></tr>
                         </tbody>
                     </table>
+
+                    <div style="margin-top:25px;color:white;">
+                        <h3>Points Per Second Calculator</h3>
+
+                        <label><input type="checkbox" id="trashBox"> Trash Box Auto</label><br>
+                        <label><input type="checkbox" id="genTemp"> Generator Temp Auto</label><br>
+                        <label><input type="checkbox" id="turbineTemp"> Turbine Temp Auto</label><br>
+                        <label><input type="checkbox" id="hydraulicPump"> Hydraulic Pump Auto</label><br>
+                        <label><input type="checkbox" id="autoExcitation"> Auto Excitation</label><br>
+                        <label><input type="checkbox" id="tailwaterBonus"> Tailwater Bonus</label><br>
+                        <label><input type="checkbox" id="demandMet"> Demand Met</label><br><br>
+
+                        <button onclick="calculatePPS()" style="background:#ff5c5c;color:#111;border:none;padding:8px 15px;border-radius:5px;cursor:pointer;font-weight:bold;">
+                            Calculate PPS
+                        </button>
+
+                        <p id="ppsResult">Points per second: 0</p>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </div>
 
     </div>
 
@@ -57,14 +84,44 @@
             <p>Licensed Under Creative Commons Attribution Share Alike 4.0 International</p>
             <br>
             <div class="footer-buttons">
-                <a href="https://discord.gg/nUVyCrZCnU" target="_blank"><button>Discord</button></a>
-                <a href="https://www.roblox.com/games/18319297875/Hydro-electric-Simulator" target="_blank"><button>Play
-                        on Roblox</button></a>
+                <a href="https://discord.gg/nUVyCrZCnU" target="_blank">
+                    <button>Discord</button>
+                </a>
+                <a href="https://www.roblox.com/games/18319297875/Hydro-electric-Simulator" target="_blank">
+                    <button>Play on Roblox</button>
+                </a>
             </div>
         </div>
     </footer>
 
-    <script src="/Temp-Name/assets/js/main.js"></script>
-</body>
+    <script>
+        function calculatePPS() {
+            const trashBox = document.getElementById("trashBox").checked
+            const genTemp = document.getElementById("genTemp").checked
+            const turbineTemp = document.getElementById("turbineTemp").checked
+            const hydraulicPump = document.getElementById("hydraulicPump").checked
+            const autoExcitation = document.getElementById("autoExcitation").checked
+            const tailwaterBonus = document.getElementById("tailwaterBonus").checked
+            const demandMet = document.getElementById("demandMet").checked
 
+            if (!demandMet) {
+                document.getElementById("ppsResult").innerText = "Points per second: 0 (Demand not met)"
+                return
+            }
+
+            let pps = 1.38
+
+            if (autoExcitation) pps *= 0.83
+            if (trashBox) pps *= 0.92
+            if (turbineTemp) pps *= 0.83
+            if (hydraulicPump) pps *= 0.83
+            if (genTemp) pps *= 0.92
+            if (tailwaterBonus) pps *= 1.15
+
+            document.getElementById("ppsResult").innerText =
+                "Points per second: " + pps.toFixed(2) + "/s"
+        }
+    </script>
+
+</body>
 </html>
