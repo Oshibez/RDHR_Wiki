@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RDHR Wiki - Annunciator Guide</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <style>
+        body {
+            background-color: #0f0f0f;
+        }
+
+        .panel-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .panel-card h2 {
+            color: #ff5c5c;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+
+        .annunciator-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .annunciator {
+            padding: 25px 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            border: 2px solid #222;
+            transition: 0.2s;
+            user-select: none;
+        }
+
+        .annunciator:hover {
+            transform: scale(1.05);
+        }
+
+        .yellow {
+            background: #f5c542;
+            color: #000;
+        }
+
+        .blue {
+            background: #3a86ff;
+            color: #fff;
+        }
+
+        .red {
+            background: #ff3b3b;
+            color: #fff;
+        }
+
+        .green {
+            background: #2ecc71;
+            color: #000;
+        }
+
+        /* ===== BIG MODAL ===== */
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.75);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal {
+            background: #111;
+            border: 3px solid transparent;
+            /* no default red */
+            padding: 40px;
+            border-radius: 10px;
+            width: 750px;
+            max-width: 95%;
+            text-align: left;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            /* neutral shadow */
+        }
+
+        .modal h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+            color: #ff5c5c;
+        }
+
+        .alarm-colour {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .modal p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fff;
+        }
+
+        .close-btn {
+            margin-top: 30px;
+            background: #ff5c5c;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .close-btn:hover {
+            background: #e04b4b;
+        }
+
+        footer {
+            margin-top: 60px;
+        }
+
+        .footer-buttons button {
+            background: #ff5c5c;
+            border: none;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .footer-buttons button:hover {
+            background: #e04b4b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <img id="hero-img" src="../assets/images/Banner3.png" alt="Banner">
+        <div class="hero-content">
+            <div class="hero-left">
+                <h1>Annunciator Guide (WIP)</h1>
+                <p>"WHY IS EVERYTHING FLASHING" - Operator</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div style="margin:20px 0;">
+            <button onclick="window.location.href='../index.html'"
+                style="background:#ff5c5c;color:#111;border:none;padding:10px 20px;border-radius:5px;cursor:pointer;font-weight:bold;">
+                ← Back
+            </button>
+        </div>
+
+        <div class="panel-card">
+            <h2>GEN. COOLING</h2>
+
+            <div class="annunciator-grid">
+
+                <div class="annunciator yellow" data-title="TURBINE TRIP"
+                    data-fix="High generator temperature caused turbine protection to trip. Check cooling system and reset turbine once temperature is stable.">
+                    TURBINE TRIP
+                </div>
+
+                <div class="annunciator blue" data-title="AUTOMATIC CONTROL"
+                    data-fix="Automatic cooling control is active. The system adjusts coolant pump speed to maintain generator temperature at 70°C.">
+                    AUTOMATIC CONTROL
+                </div>
+
+                <div class="annunciator red" data-title="GEN. TEMP HIGH"
+                    data-fix="Increase coolant pump speed. Monitor delta temperature gauge. Once temperature returns to safe range, stabilise pump speed.">
+                    GEN. TEMP HIGH
+                </div>
+
+                <div class="annunciator yellow" data-title="GEN TEMP LOW"
+                    data-fix="Generator temperature is below optimal range. This does not immediately affect operations but may reduce efficiency.">
+                    GEN TEMP LOW
+                </div>
+
+                <div class="annunciator green" data-title="HIGH HUMIDITY"
+                    data-fix="Humidity levels inside generator housing are elevated. Activate enclosure heaters or dehumidifiers. Monitor insulation resistance.">
+                    HIGH HUMIDITY
+                </div>
+
+                <div class="annunciator green" data-title="PRE HEATER ACTIVE"
+                    data-fix="Generator preheater is active. Temperature will gradually increase while active. Turn off once operating temperature is reached.">
+                    PRE HEATER ACTIVE
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BIG MODAL -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <h1 id="modalTitle"></h1>
+            <div class="alarm-colour" id="modalColour"></div>
+            <p id="modalFix"></p>
+            <button class="close-btn" id="closeBtn">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>Licensed Under Creative Commons Attribution Share Alike 4.0 International</p>
+            <div class="footer-buttons">
+                <a href="https://discord.gg/nUVyCrZCnU" target="_blank">
+                    <button>Discord</button>
+                </a>
+                <a href="https://www.roblox.com/games/18319297875/Hydro-electric-Simulator" target="_blank">
+                    <button>Play on Roblox</button>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const modalOverlay = document.getElementById("modalOverlay");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalFix = document.getElementById("modalFix");
+        const modalColour = document.getElementById("modalColour");
+        const closeBtn = document.getElementById("closeBtn");
+
+        document.querySelectorAll(".annunciator").forEach(item => {
+            item.addEventListener("click", () => {
+
+                modalTitle.innerText = item.dataset.title;
+                modalFix.innerText = item.dataset.fix;
+
+                let colourText = "STATUS";
+                let borderColor = "#ff5c5c";
+
+                if (item.classList.contains("red")) {
+                    colourText = "RED Alarm";
+                    borderColor = "#ff3b3b";
+                }
+                if (item.classList.contains("yellow")) {
+                    colourText = "AMBER Alarm";
+                    borderColor = "#f5c542";
+                }
+                if (item.classList.contains("blue")) {
+                    colourText = "AUTO Control Indicator";
+                    borderColor = "#3a86ff";
+                }
+                if (item.classList.contains("green")) {
+                    colourText = "GREEN Indicator";
+                    borderColor = "#2ecc71";
+                }
+
+                modalColour.innerText = colourText;
+                document.querySelector(".modal").style.borderColor = borderColor;
+
+                modalOverlay.style.display = "flex";
+            });
+        });
+
+        modalOverlay.addEventListener("click", (e) => {
+            if (e.target === modalOverlay) {
+                modalOverlay.style.display = "none";
+            }
+        });
+
+        closeBtn.addEventListener("click", () => {
+            modalOverlay.style.display = "none";
+        });
+    </script>
+
+</body>
+
+</html>
