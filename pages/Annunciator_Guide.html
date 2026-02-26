@@ -3,148 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>RDHR Wiki - Annunciator Guide</title>
+    <title>RHDR Wiki - Annunciator Guide</title>
     <link rel="stylesheet" href="../assets/css/main.css">
-
-    <style>
-        body {
-            background-color: #0f0f0f;
-        }
-
-        .panel-card {
-            background: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 30px;
-        }
-
-        .panel-card h2 {
-            color: #ff5c5c;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 5px;
-        }
-
-        .annunciator-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-        }
-
-        .annunciator {
-            padding: 25px 10px;
-            border-radius: 6px;
-            font-weight: bold;
-            text-align: center;
-            cursor: pointer;
-            border: 2px solid #222;
-            transition: 0.2s;
-            user-select: none;
-        }
-
-        .annunciator:hover {
-            transform: scale(1.05);
-        }
-
-        .yellow {
-            background: #f5c542;
-            color: #000;
-        }
-
-        .blue {
-            background: #3a86ff;
-            color: #fff;
-        }
-
-        .red {
-            background: #ff3b3b;
-            color: #fff;
-        }
-
-        .green {
-            background: #2ecc71;
-            color: #000;
-        }
-
-        /* ===== BIG MODAL ===== */
-
-        .modal-overlay {
-            position: fixed;
-            inset: 0;
-            backdrop-filter: blur(10px);
-            background: rgba(0, 0, 0, 0.75);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .modal {
-            background: #111;
-            border: 3px solid transparent;
-            /* no default red */
-            padding: 40px;
-            border-radius: 10px;
-            width: 750px;
-            max-width: 95%;
-            text-align: left;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-            /* neutral shadow */
-        }
-
-        .modal h1 {
-            font-size: 32px;
-            margin-bottom: 8px;
-            color: #ff5c5c;
-        }
-
-        .alarm-colour {
-            font-size: 15px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            opacity: 0.8;
-        }
-
-        .modal p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #fff;
-        }
-
-        .close-btn {
-            margin-top: 30px;
-            background: #ff5c5c;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .close-btn:hover {
-            background: #e04b4b;
-        }
-
-        footer {
-            margin-top: 60px;
-        }
-
-        .footer-buttons button {
-            background: #ff5c5c;
-            border: none;
-            padding: 8px 15px;
-            margin: 5px;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .footer-buttons button:hover {
-            background: #e04b4b;
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/css/annunciatorMain.css">
 </head>
 
 <body>
@@ -155,7 +16,7 @@
         <div class="hero-content">
             <div class="hero-left">
                 <h1>Annunciator Guide (WIP)</h1>
-                <p>"WHY IS EVERYTHING FLASHING" - Operator</p>
+                <p>"WHY IS EVERYTHING FLASHING" - Jr Operator</p>
             </div>
         </div>
     </header>
@@ -195,7 +56,7 @@
                 </div>
 
                 <div class="annunciator green" data-title="HIGH HUMIDITY"
-                    data-fix="Humidity levels inside generator housing are elevated. Activate enclosure heaters or dehumidifiers. Monitor insulation resistance.">
+                    data-fix="Humidity levels inside generator housing are elevated. Increase coolant as nessacary">
                     HIGH HUMIDITY
                 </div>
 
@@ -207,9 +68,62 @@
             </div>
         </div>
 
+        <div class="panel-card">
+            <h2>COOLANT PANEL</h2>
+
+            <div class="annunciator-grid">
+
+                <div class="annunciator yellow" data-title="FILTER A CLOG"
+                    data-fix="Null">
+                    FILTER A CLOG
+                </div>
+
+                <div class="annunciator green" data-title="FILTER A ACTIVE"
+                    data-fix="Null">
+                    FILTER A ACTIVE
+                </div>
+
+                <div class="annunciator green" data-title="FILTER B ACTIVE"
+                    data-fix="Null">
+                    FILTER B ACTIVE
+                </div>
+
+                <div class="annunciator yellow" data-title="FILTER B CLOG"
+                    data-fix="Null">
+                    FILTER B CLOG
+                </div>
+
+                <div class="annunciator red" data-title="WATER TEMP FREEZING"
+                    data-fix="Null">
+                    WATER TEMP FREEZING
+                </div>
+
+                <div class="annunciator red" data-title="COOLANT PUMP TRIP"
+                    data-fix="Null">
+                    COOLANT PUMP TRIP
+                </div>
+
+                <div class="annunciator yellow" data-title="MINERALS HIGH"
+                    data-fix="Null">
+                    MINERALS HIGH
+                </div>
+
+                <div class="annunciator red" data-title="FILTER BYPASS"
+                    data-fix="Null">
+                    FILTER BYPASS
+                </div>
+
+                <div class="annunciator yellow" data-title="FILTER CHANGEOVER"
+                    data-fix="Null">
+                    FILTER CHANGEOVER
+                </div>
+                
+
+            </div>
+        </div>
+
     </div>
 
-    <!-- BIG MODAL -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal">
             <h1 id="modalTitle"></h1>
@@ -223,12 +137,9 @@
         <div class="footer-content">
             <p>Licensed Under Creative Commons Attribution Share Alike 4.0 International</p>
             <div class="footer-buttons">
-                <a href="https://discord.gg/nUVyCrZCnU" target="_blank">
-                    <button>Discord</button>
-                </a>
-                <a href="https://www.roblox.com/games/18319297875/Hydro-electric-Simulator" target="_blank">
-                    <button>Play on Roblox</button>
-                </a>
+                <a href="https://discord.gg/nUVyCrZCnU" target="_blank"><button>Discord</button></a>
+                <a href="https://www.roblox.com/games/18319297875/Hydro-electric-Simulator" target="_blank"><button>Play
+                        on Roblox</button></a>
             </div>
         </div>
     </footer>
