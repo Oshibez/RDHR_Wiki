@@ -31,61 +31,23 @@
         </div>
 
         <div class="panel-card">
-            <h2>GEN. COOLING</h2>
-
-            <div class="annunciator-grid">
-
-                <div class="annunciator yellow" data-title="TURBINE TRIP"
-                    data-fix="High generator temperature caused turbine protection to trip. Check cooling system and reset turbine once temperature is stable.">
-                    TURBINE TRIP
-                </div>
-
-                <div class="annunciator blue" data-title="AUTOMATIC CONTROL"
-                    data-fix="Automatic cooling control is active. The system adjusts coolant pump speed to maintain generator temperature at 70°C.">
-                    AUTOMATIC CONTROL
-                </div>
-
-                <div class="annunciator red" data-title="GEN. TEMP HIGH"
-                    data-fix="Increase coolant pump speed. Monitor delta temperature gauge. Once temperature returns to safe range, stabilise pump speed.">
-                    GEN. TEMP HIGH
-                </div>
-
-                <div class="annunciator yellow" data-title="GEN TEMP LOW"
-                    data-fix="Generator temperature is below optimal range. This does not immediately affect operations but may reduce efficiency.">
-                    GEN TEMP LOW
-                </div>
-
-                <div class="annunciator green" data-title="HIGH HUMIDITY"
-                    data-fix="Humidity levels inside generator housing are elevated. Increase coolant as nessacary">
-                    HIGH HUMIDITY
-                </div>
-
-                <div class="annunciator green" data-title="PRE HEATER ACTIVE"
-                    data-fix="Generator preheater is active. Temperature will gradually increase while active. Turn off once operating temperature is reached.">
-                    PRE HEATER ACTIVE
-                </div>
-
-            </div>
-        </div>
-
-        <div class="panel-card">
             <h2>COOLANT PANEL</h2>
 
             <div class="annunciator-grid">
 
-                <div class="annunciator yellow" data-title="FILTER A CLOG" data-fix="Null">
+                <div class="annunciator yellow" data-title="FILTER A CLOG" data-fix="Filter A has been clogged. Deselect to filter A then call 1400 to fix.">
                     FILTER A CLOG
                 </div>
 
-                <div class="annunciator green" data-title="FILTER A ACTIVE" data-fix="Null">
+                <div class="annunciator green" data-title="FILTER A ACTIVE" data-fix="Filter A is in use.">
                     FILTER A ACTIVE
                 </div>
 
-                <div class="annunciator green" data-title="FILTER B ACTIVE" data-fix="Null">
+                <div class="annunciator green" data-title="FILTER B ACTIVE" data-fix="Filter B is in use.">
                     FILTER B ACTIVE
                 </div>
 
-                <div class="annunciator yellow" data-title="FILTER B CLOG" data-fix="Null">
+                <div class="annunciator yellow" data-title="FILTER B CLOG" data-fix="Filter B has been clogged. Deselect to filter B then call 1400 to fix.">
                     FILTER B CLOG
                 </div>
 
@@ -101,14 +63,51 @@
                     MINERALS HIGH
                 </div>
 
-                <div class="annunciator red" data-title="FILTER BYPASS" data-fix="Null">
+                <div class="annunciator red" data-title="FILTER BYPASS" data-fix="Filter A or Filter B are not in use. No downsides yet.">
                     FILTER BYPASS
                 </div>
 
-                <div class="annunciator yellow" data-title="FILTER CHANGEOVER" data-fix="Null">
+                <div class="annunciator yellow" data-title="FILTER CHANGEOVER" data-fix="">
                     FILTER CHANGEOVER
                 </div>
 
+            </div>
+        </div>
+
+        <div class="panel-card">
+            <h2>GEN. COOLING</h2>
+
+            <div class="annunciator-grid">
+
+                <div class="annunciator yellow" data-title="TURBINE TRIP"
+                    data-fix="High generator temperature caused turbine protection to trip. Check cooling system and reset turbine once temperature is stable.">
+                    TURBINE TRIP
+                </div>
+
+                <div class="annunciator blue" data-title="AUTOMATIC CONTROL"
+                    data-fix="Automatic cooling control is active. The system adjusts coolant pump speed to maintain generator temperature at 70°C.">
+                    AUTOMATIC CONTROL
+                </div>
+
+                <div class="annunciator red" data-title="GEN TEMP HIGH"
+                    data-fix="Increase coolant pump speed or turn. Monitor delta temperature gauge. Once temperature returns to safe range, stabilise pump speed. Alternative (Point reduction): Turn on GEN TEMP AUTO CONTROL">
+                    GEN TEMP HIGH
+                </div>
+
+                <div class="annunciator yellow" data-title="GEN TEMP LOW"
+                    data-fix="Generator temperature is below optimal range. This does not immediately affect operations but may reduce efficiency.">
+                    GEN TEMP LOW
+                </div>
+
+                <div class="annunciator green" data-title="HIGH HUMIDITY"
+                    data-fix="Humidity levels are elevated. Increase coolant as above 39°C or GEN will trip.">
+                    HIGH HUMIDITY
+                </div>
+
+                <div class="annunciator green" data-title="PRE HEATER ACTIVE"
+                    data-fix="Generator preheater is active. Temperature will gradually increase while active. Turn off once operating temperature is reached.">
+                    PRE HEATER ACTIVE
+                </div>
 
             </div>
         </div>
@@ -118,58 +117,57 @@
 
             <div class="annunciator-grid">
 
-                <div class="annunciator red" data-title="" data-fix="Null">
-                    OIL TEMP. HIGH
+                <div class="annunciator red" data-title="OIL TEMP HIGH" data-fix="OIL TEMP is above optimal range, increase coolant.">
+                    OIL TEMP HIGH
                 </div>
 
-                <div class="annunciator red" data-title="FILTER A ACTIVE" data-fix="Null">
-                    DIFF. PRESSURE HIGH HIGH
+                <div class="annunciator red" data-title="DIFF PRESSURE HIGH HIGH" data-fix="Null">
+                    DIFF PRESSURE HIGH HIGH
                 </div>
 
-                <div class="annunciator red" data-title="FILTER B ACTIVE" data-fix="Null">
-                    OIL PRESS. HIGH
+                <div class="annunciator red" data-title="OIL PRESS HIGH" data-fix="Null">
+                    OIL PRESS HIGH
                 </div>
 
-                <div class="annunciator yellow" data-title="FILTER B CLOG" data-fix="Null">
-                    OIL TEMP. LOW
+                <div class="annunciator yellow" data-title="OIL TEMP LOW" data-fix="Null">
+                    OIL TEMP LOW
                 </div>
 
-                <div class="annunciator red" data-title="WATER TEMP FREEZING" data-fix="Null">
+                <div class="annunciator red" data-title="TRANSFER TO AUX PUMP" data-fix="Null">
                     TRANSFER TO AUX PUMP
                 </div>
 
-                <div class="annunciator yellow" data-title="COOLANT PUMP TRIP" data-fix="Null">
+                <div class="annunciator yellow" data-title="OIL TANK LEVEL LOW" data-fix="Null">
                     OIL TANK LEVEL LOW
                 </div>
 
-                <div class="annunciator red" data-title="MINERALS HIGH" data-fix="Null">
+                <div class="annunciator red" data-title="DIFFERENTIAL PRESSURE HIGH" data-fix="Null">
                     DIFFERENTIAL PRESSURE HIGH
                 </div>
 
-                <div class="annunciator yellow" data-title="FILTER BYPASS" data-fix="Null">
-                    OIL PRESS. LOW
+                <div class="annunciator yellow" data-title="OIL PRESS LOW" data-fix="Null">
+                    OIL PRESS LOW
                 </div>
 
-                <div class="annunciator green" data-title="FILTER CHANGEOVER" data-fix="Null">
-                    AUX. PUMP RUNNING
+                <div class="annunciator green" data-title="AUX PUMP RUNNING" data-fix="Null">
+                    AUX PUMP RUNNING
                 </div>
 
-                <div class="annunciator green" data-title="FILTER CHANGEOVER" data-fix="Null">
-                    ELEC. PUMP RUNNING
+                <div class="annunciator green" data-title="ELEC PUMP RUNNING" data-fix="ELECTRIC PUMP is running [yap]. Turn off at 1800 rpm and switch to AUX PUMP.">
+                    ELEC PUMP RUNNING
                 </div>
 
-                <div class="annunciator blue" data-title="FILTER CHANGEOVER" data-fix="Null">
+                <div class="annunciator blue" data-title="AUTOMATIC CTRL" data-fix="Null">
                     AUTOMATIC CTRL
                 </div>
 
-                <div class="annunciator red" data-title="FILTER CHANGEOVER" data-fix="Null">
-                    OIL FITER BYPASS OPEN
+                <div class="annunciator red" data-title="OIL FILTER BYPASS OPEN" data-fix="Null">
+                    OIL FILTER BYPASS OPEN
                 </div>
 
-                <div class="annunciator yellow" data-title="FILTER CHANGEOVER" data-fix="Null">
+                <div class="annunciator yellow" data-title="FILTER CHANGE ACTIVE" data-fix="Null">
                     FILTER CHANGE ACTIVE
                 </div>
-
 
             </div>
         </div>
@@ -195,6 +193,10 @@
                     HYDRAULIC SHUTOFF
                 </div>
 
+                <div class="annunciator red" data-title="HYDRAULIC PRESSURE HIGH" data-fix="Null">
+                    HYDRAULIC PRESSURE HIGH
+                </div>
+
                 <div class="annunciator yellow" data-title="PUMP A OIL TEMP LOW" data-fix="Null">
                     PUMP A OIL TEMP LOW
                 </div>
@@ -211,16 +213,16 @@
                     PUMP A READY
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP A OIL TEMP LOW" data-fix="Null">
+                <div class="annunciator yellow" data-title="PUMP A OIL TEMP HIGH" data-fix="Null">
                     PUMP A OIL TEMP HIGH
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP B OIL TEMP LOW" data-fix="Null">
+                <div class="annunciator yellow" data-title="PUMP B OIL TEMP HIGH" data-fix="Null">
                     PUMP B OIL TEMP HIGH
                 </div>
 
-                <div class="annunciator red" data-title="FILTER CHANGEOVER" data-fix="Null">
-                    OIL FITER BYPASS OPEN
+                <div class="annunciator green" data-title="PRESSURE NORMAL" data-fix="Null">
+                    PRESSURE NORMAL
                 </div>
 
                 <div class="annunciator green" data-title="PRESSURE NORMAL" data-fix="Null">
@@ -234,6 +236,7 @@
                 <div class="annunciator green" data-title="PUMP B READY" data-fix="Null">
                     PUMP B READY
                 </div>
+
             </div>
         </div>
 
@@ -242,246 +245,375 @@
 
             <div class="annunciator-grid">
 
-                <div class="annunciator green" data-title="PREHEAT A ACTIVE" data-fix="Null">
+                <div class="annunciator red" data-title="SPILLWAY 1 JAMMED" data-fix="Null">
                     SPILLWAY 1 JAMMED
                 </div>
 
-                <div class="annunciator green" data-title="PREHEAT B ACTIVE" data-fix="Null">
+                <div class="annunciator red" data-title="SPILLWAY 2 JAMMED" data-fix="Null">
                     SPILLWAY 2 JAMMED
                 </div>
 
-                <div class="annunciator red" data-title="PUMP A TRIP" data-fix="Null">
-                    SPILLWAY 1 EMER. SHUT
+                <div class="annunciator yellow" data-title="SPILLWAY 1 EMERGENCY SHUT" data-fix="Null">
+                    SPILLWAY 1 EMERGENCY SHUT
                 </div>
 
-                <div class="annunciator red" data-title="HYDRAULIC SHUTOFF" data-fix="Null">
-                    SPILL. FLOW HIGH HIGH
+                <div class="annunciator yellow" data-title="SPILLWAY FLOW HIGH HIGH" data-fix="Null">
+                    SPILLWAY FLOW HIGH HIGH
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP A OIL TEMP LOW" data-fix="Null">
+                <div class="annunciator yellow" data-title="SPILLWAY FLOW HIGH" data-fix="Null">
                     SPILLWAY FLOW HIGH
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP B OIL TEMP LOW" data-fix="Null">
+                <div class="annunciator red" data-title="RESERVOIR LEVEL HIGH" data-fix="Null">
                     RESERVOIR LEVEL HIGH
                 </div>
 
-                <div class="annunciator red" data-title="PUMP B TRIP" data-fix="Null">
-                    RSVR HEAD NORMAL
+                <div class="annunciator green" data-title="RESERVOIR HEAD NORMAL" data-fix="Null">
+                    RESERVOIR HEAD NORMAL
                 </div>
 
-                <div class="annunciator green" data-title="PUMP A READY" data-fix="Null">
-                    SPILLWAY 2 EMER. SHUT
+                <div class="annunciator yellow" data-title="SPILLWAY 2 EMERGENCY SHUT" data-fix="Null">
+                    SPILLWAY 2 EMERGENCY SHUT
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP A OIL TEMP LOW" data-fix="Null">
+                <div class="annunciator green" data-title="SPILLWAY 2 IN TRANSIT" data-fix="Null">
                     SPILLWAY 2 IN TRANSIT
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP B OIL TEMP LOW" data-fix="Null">
-                    EMER. HYD. PUMP TRIP
+                <div class="annunciator red" data-title="EMERGENCY HYDRAULIC PUMP TRIP" data-fix="Null">
+                    EMERGENCY HYDRAULIC PUMP TRIP
                 </div>
 
-                <div class="annunciator red" data-title="FILTER CHANGEOVER" data-fix="Null">
+                <div class="annunciator yellow" data-title="RESERVOIR LEVEL LOW" data-fix="Null">
                     RESERVOIR LEVEL LOW
                 </div>
 
-                <div class="annunciator green" data-title="PRESSURE NORMAL" data-fix="Null">
-                    MAIN HYD PUMP TRIP
+                <div class="annunciator red" data-title="MAIN HYDRAULIC PUMP TRIP" data-fix="Null">
+                    MAIN HYDRAULIC PUMP TRIP
                 </div>
 
-                <div class="annunciator blue" data-title="AUTOMATIC CTRL" data-fix="Null">
+                <div class="annunciator green" data-title="SPILLWAY 1 IN TRANSIT" data-fix="Null">
                     SPILLWAY 1 IN TRANSIT
                 </div>
 
-                <div class="annunciator green" data-title="PUMP B READY" data-fix="Null">
-                    EMER. HYD. PUMP IN USE  
+                <div class="annunciator red" data-title="EMERGENCY HYDRAULIC PUMP IN USE" data-fix="Null">
+                    EMERGENCY HYDRAULIC PUMP IN USE
                 </div>
+
             </div>
         </div>
 
         <div class="panel-card">
-            <h2>TURBINE PANNEL 1</h2>
+            <h2>TURBINE PANEL 1</h2>
 
             <div class="annunciator-grid">
 
-                <div class="annunciator yellow" data-title="PREHEAT A ACTIVE" data-fix="Null">
+                <div class="annunciator yellow" data-title="UNDER EXCITATION" data-fix="Null">
                     UNDER EXCITATION
                 </div>
 
-                <div class="annunciator yellow" data-title="PREHEAT B ACTIVE" data-fix="Null">
-                    GEN TEMP LOW
+                <div class="annunciator yellow" data-title="GENERATOR TEMP LOW" data-fix="Null">
+                    GENERATOR TEMP LOW
                 </div>
 
-                <div class="annunciator green" data-title="PUMP A TRIP" data-fix="Null">
-                    GRID BRKER CLOSED
+                <div class="annunciator green" data-title="GRID BREAKER CLOSED" data-fix="Null">
+                    GRID BREAKER CLOSED
                 </div>
 
-                <div class="annunciator red" data-title="HYDRAULIC SHUTOFF" data-fix="Null">
+                <div class="annunciator red" data-title="LOW EXCITATION VOLTAGE" data-fix="Null">
                     LOW EXCITATION VOLTAGE
                 </div>
 
-                <div class="annunciator red" data-title="PUMP A OIL TEMP LOW" data-fix="Null">
+                <div class="annunciator red" data-title="FIELD BREAKER OFF" data-fix="Null">
                     FIELD BREAKER OFF
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP B OIL TEMP LOW" data-fix="Null">
+                <div class="annunciator yellow" data-title="OVER EXCITATION" data-fix="Null">
                     OVER EXCITATION
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP B TRIP" data-fix="Null">
-                    OVER TEMP LOW
+                <div class="annunciator yellow" data-title="GENERATOR TEMP HIGH" data-fix="Null">
+                    GENERATOR TEMP HIGH
                 </div>
 
-                <div class="annunciator red" data-title="PUMP A READY" data-fix="Null">
+                <div class="annunciator red" data-title="OIL PRESSURE LOW" data-fix="Null">
                     OIL PRESSURE LOW
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP A OIL TEMP LOW" data-fix="Null">
+                <div class="annunciator yellow" data-title="VIBRATION HIGH" data-fix="Null">
                     VIBRATION HIGH
                 </div>
 
-                <div class="annunciator red" data-title="PUMP B OIL TEMP LOW" data-fix="Null">
+                <div class="annunciator red" data-title="GOVERNOR FAILURE" data-fix="utomatic turbine run-up has failed due to.">
                     GOVERNOR FAILURE
                 </div>
 
-                <div class="annunciator blue" data-title="FILTER CHANGEOVER" data-fix="Null">
-                   AVR ENABLED
+                <div class="annunciator blue" data-title="AVR ENABLED" data-fix="Null">
+                    AVR ENABLED
                 </div>
 
-                <div class="annunciator red" data-title="PRESSURE NORMAL" data-fix="Null">
+                <div class="annunciator red" data-title="OIL TEMP HIGH" data-fix="Null">
                     OIL TEMP HIGH
                 </div>
 
-                <div class="annunciator blue" data-title="AUTOMATIC CTRL" data-fix="Null">
-                   GOVERNOR ENABLED
+                <div class="annunciator blue" data-title="GOVERNOR ENABLED" data-fix="Automatic turbine run-up is enabled.">
+                    GOVERNOR ENABLED
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP B READY" data-fix="Null">
-                    MIV PARTIAL OPEN  
+                <div class="annunciator yellow" data-title="MIV PARTIAL OPEN" data-fix="Null">
+                    MIV PARTIAL OPEN
                 </div>
 
-                <div class="annunciator red" data-title="PUMP B READY" data-fix="Null">
+                <div class="annunciator red" data-title="BRAKE ENGAGED" data-fix="Null">
                     BRAKE ENGAGED
                 </div>
+
             </div>
         </div>
 
         <div class="panel-card">
-            <h2>TURBINE PANNEL 2</h2>
+            <h2>TURBINE PANEL 2</h2>
 
             <div class="annunciator-grid">
 
-                <div class="annunciator green" data-title="PREHEAT A ACTIVE" data-fix="Null">
+                <div class="annunciator green" data-title="TURBINE RUNUP" data-fix="Null">
                     TURBINE RUNUP
                 </div>
 
-                <div class="annunciator red" data-title="PREHEAT B ACTIVE" data-fix="Null">
+                <div class="annunciator red" data-title="TURBINE 1 DAMAGE" data-fix="Null">
                     TURBINE 1 DAMAGE
                 </div>
 
-                <div class="annunciator red" data-title="PUMP A TRIP" data-fix="Null">
-                    GEN TRANSFORMER TROUBLE
+                <div class="annunciator red" data-title="GENERATOR TRANSFORMER TROUBLE" data-fix="Null">
+                    GENERATOR TRANSFORMER TROUBLE
                 </div>
 
-                <div class="annunciator red" data-title="HYDRAULIC SHUTOFF" data-fix="Null">
-                    CAVITATIONS
+                <div class="annunciator red" data-title="CAVITATION" data-fix="Null">
+                    CAVITATION
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP A OIL TEMP LOW" data-fix="Null">
+                <div class="annunciator yellow" data-title="SPILLWAY FLOW HIGH" data-fix="Null">
                     SPILLWAY FLOW HIGH
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP B OIL TEMP LOW" data-fix="Null">
+                <div class="annunciator yellow" data-title="OVER DEMAND" data-fix="Null">
                     OVER DEMAND
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP B TRIP" data-fix="Null">
+                <div class="annunciator yellow" data-title="OVERSPEED TRIP TEST" data-fix="Null">
                     OVERSPEED TRIP TEST
                 </div>
 
-                <div class="annunciator red" data-title="PUMP A READY" data-fix="Null">
+                <div class="annunciator red" data-title="OVERSPEED TRIP" data-fix="Null">
                     OVERSPEED TRIP
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP A OIL TEMP LOW" data-fix="Null">
-                    RSVR HEAD LOW
+                <div class="annunciator yellow" data-title="RESERVOIR HEAD LOW" data-fix="Null">
+                    RESERVOIR HEAD LOW
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP B OIL TEMP LOW" data-fix="Null">
-                    UNDERDEMAND
+                <div class="annunciator yellow" data-title="UNDER DEMAND" data-fix="Null">
+                    UNDER DEMAND
                 </div>
 
-                <div class="annunciator yellow" data-title="FILTER CHANGEOVER" data-fix="Null">
-                   TRASH RACK INTAKE PRESS. HIGH
+                <div class="annunciator yellow" data-title="TRASH RACK INTAKE PRESSURE HIGH" data-fix="Null">
+                    TRASH RACK INTAKE PRESSURE HIGH
                 </div>
 
-                <div class="annunciator yellow" data-title="PRESSURE NORMAL" data-fix="Null">
+                <div class="annunciator red" data-title="TURBINE TRIP" data-fix="Null">
                     TURBINE TRIP
                 </div>
+
             </div>
         </div>
 
         <div class="panel-card">
-            <h2>TURBINE PANNEL 3</h2>
+            <h2>TURBINE PANEL 3</h2>
 
             <div class="annunciator-grid">
 
-                <div class="annunciator red" data-title="PREHEAT A ACTIVE" data-fix="Null">
+                <div class="annunciator red" data-title="NITROGEN SYSTEM FAILURE" data-fix="Null">
                     NITROGEN SYSTEM FAILURE
                 </div>
 
-                <div class="annunciator red" data-title="PREHEAT B ACTIVE" data-fix="Null">
+                <div class="annunciator red" data-title="WICKET MAIN ACTUATOR FAILURE" data-fix="Null">
                     WICKET MAIN ACTUATOR FAILURE
                 </div>
 
-                <div class="annunciator red" data-title="PUMP A TRIP" data-fix="Null">
+                <div class="annunciator red" data-title="PENSTOCK CAVITATION" data-fix="Null">
                     PENSTOCK CAVITATION
                 </div>
 
-                <div class="annunciator red" data-title="HYDRAULIC SHUTOFF" data-fix="Null">
+                <div class="annunciator red" data-title="TURBINE CAVITATION" data-fix="Null">
                     TURBINE CAVITATION
                 </div>
 
-                <div class="annunciator red" data-title="PUMP A OIL TEMP LOW" data-fix="Null">
-                    DRAFT TUBE PRESS HIGH
+                <div class="annunciator red" data-title="DRAFT TUBE PRESSURE HIGH" data-fix="Null">
+                    DRAFT TUBE PRESSURE HIGH
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP B OIL TEMP LOW" data-fix="Null">
+                <div class="annunciator red" data-title="NITROGEN CHARGE LOW" data-fix="Null">
                     NITROGEN CHARGE LOW
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP B TRIP" data-fix="Null">
-                    INTAKE DIFF PRESS HIGH
+                <div class="annunciator yellow" data-title="INTAKE DIFFERENTIAL PRESSURE HIGH" data-fix="Null">
+                    INTAKE DIFFERENTIAL PRESSURE HIGH
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP A READY" data-fix="Null">
-                    WATER EFLUX HIGH
+                <div class="annunciator yellow" data-title="WATER EFFLUX HIGH" data-fix="Null">
+                    WATER EFFLUX HIGH
                 </div>
 
-                <div class="annunciator red" data-title="PUMP A OIL TEMP LOW" data-fix="Null">
+                <div class="annunciator red" data-title="DRAFT TUBE CAVITATION" data-fix="Null">
                     DRAFT TUBE CAVITATION
                 </div>
 
-                <div class="annunciator yellow" data-title="PUMP B OIL TEMP LOW" data-fix="Null">
+                <div class="annunciator yellow" data-title="NITROGEN UNARMED" data-fix="Null">
                     NITROGEN UNARMED
                 </div>
 
-                <div class="annunciator yellow" data-title="FILTER CHANGEOVER" data-fix="Null">
-                   MIV OPENING BLOCK
+                <div class="annunciator yellow" data-title="MIV OPENING BLOCK" data-fix="Null">
+                    MIV OPENING BLOCK
                 </div>
 
-                <div class="annunciator green" data-title="PRESSURE NORMAL" data-fix="Null">
-                    WICKET ALT CTRL
+                <div class="annunciator green" data-title="WICKET ALTERNATE CONTROL" data-fix="Null">
+                    WICKET ALTERNATE CONTROL
                 </div>
 
-                <div class="annunciator green" data-title="FILTER CHANGEOVER" data-fix="Null">
-                   WICKETS ELEC CTRL
+                <div class="annunciator green" data-title="WICKETS ELECTRIC CONTROL" data-fix="Null">
+                    WICKETS ELECTRIC CONTROL
                 </div>
 
-                <div class="annunciator green" data-title="PRESSURE NORMAL" data-fix="Null">
+                <div class="annunciator green" data-title="DRAFT TUBE SUCTION" data-fix="Null">
                     DRAFT TUBE SUCTION
                 </div>
+
+            </div>
+        </div>
+
+        <div class="panel-card">
+            <h2>ELECTRICAL PANEL</h2>
+
+            <div class="annunciator-grid">
+
+                <div class="annunciator red" data-title="OFFSITE POWER LOSS" data-fix="Null">
+                    OFFSITE POWER LOSS
+                </div>
+
+                <div class="annunciator red" data-title="SUT FAILURE" data-fix="Null">
+                    SUT FAILURE
+                </div>
+
+                <div class="annunciator red" data-title="EDG STARTUP FAULT" data-fix="Null">
+                    EDG STARTUP FAULT
+                </div>
+
+                <div class="annunciator red" data-title="EDG BREAKER FAILURE" data-fix="Null">
+                    EDG BREAKER FAILURE
+                </div>
+
+                <div class="annunciator red" data-title="STATION BLACKOUT" data-fix="Null">
+                    STATION BLACKOUT
+                </div>
+
+                <div class="annunciator yellow" data-title="BUS A UNDERVOLTAGE" data-fix="Null">
+                    BUS A UNDERVOLTAGE
+                </div>
+
+                <div class="annunciator yellow" data-title="BUS A1 UNDERVOLTAGE" data-fix="Null">
+                    BUS A1 UNDERVOLTAGE
+                </div>
+
+                <div class="annunciator yellow" data-title="SUT TRANSFER TO ISLAND" data-fix="Null">
+                    SUT TRANSFER TO ISLAND
+                </div>
+
+                <div class="annunciator yellow" data-title="EDG TROUBLE" data-fix="Null">
+                    EDG TROUBLE
+                </div>
+
+                <div class="annunciator yellow" data-title="EDG BREAKER TROUBLE" data-fix="Null">
+                    EDG BREAKER TROUBLE
+                </div>
+
+                <div class="annunciator green" data-title="BATTERY POWER SUPPLY" data-fix="Null">
+                    BATTERY POWER SUPPLY
+                </div>
+
+                <div class="annunciator yellow" data-title="BUS B UNDERVOLTAGE" data-fix="Null">
+                    BUS B UNDERVOLTAGE
+                </div>
+
+                <div class="annunciator red" data-title="LOW VOLTAGE TRANSFORMER" data-fix="Null">
+                    LOW VOLTAGE TRANSFORMER
+                </div>
+
+                <div class="annunciator green" data-title="ISLAND POWER FEED" data-fix="Null">
+                    ISLAND POWER FEED
+                </div>
+
+                <div class="annunciator yellow" data-title="STARTUP TRANSFER OVERCURRENT" data-fix="Null">
+                    STARTUP TRANSFER OVERCURRENT
+                </div>
+
+                <div class="annunciator green" data-title="EDG BREAKER CLOSED" data-fix="Null">
+                    EDG BREAKER CLOSED
+                </div>
+
+                <div class="annunciator green" data-title="EDG RUNUP" data-fix="Null">
+                    EDG RUNUP
+                </div>
+
+                <div class="annunciator green" data-title="BATTERY CHARGING" data-fix="Null">
+                    BATTERY CHARGING
+                </div>
+
+                <div class="annunciator yellow" data-title="BUS C UNDERVOLTAGE" data-fix="Null">
+                    BUS C UNDERVOLTAGE
+                </div>
+
+                <div class="annunciator red" data-title="ISLANDING TRANSFORMER TROUBLE" data-fix="Null">
+                    ISLANDING TRANSFORMER TROUBLE
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================= UNIT 1 ================= -->
+
+        <div class="panel-card">
+            <h2>UNIT 1</h2>
+            <div class="annunciator-grid">
+
+                <div class="annunciator yellow" data-title="UNIT 1 TRIP"
+                    data-fix="Unit 1 tripped by protection system.">UNIT 1 TRIP</div>
+                <div class="annunciator red" data-title="TURBINE 1 TRIP" data-fix="Turbine 1 protection activated.">
+                    TURBINE 1 TRIP</div>
+                <div class="annunciator green" data-title="UNIT 1 SYNCED" data-fix="Unit 1 synchronised to grid.">UNIT 1
+                    SYNCED</div>
+                <div class="annunciator red" data-title="TRANSFORMER TROUBLE"
+                    data-fix="Generator transformer fault detected.">TRANSFORMER TROUBLE</div>
+                <div class="annunciator green" data-title="UNIT 1 ON DEMAND"
+                    data-fix="Unit 1 responding to load demand.">UNIT 1 ON DEMAND</div>
+
+            </div>
+        </div>
+
+        <!-- ================= UNIT 2 ================= -->
+
+        <div class="panel-card">
+            <h2>UNIT 2</h2>
+            <div class="annunciator-grid">
+
+                <div class="annunciator yellow" data-title="UNIT 2 TRIP" data-fix="INOP">UNIT 2 TRIP</div>
+                <div class="annunciator red" data-title="TURBINE 2 TRIP" data-fix="INOP">
+                    TURBINE 2 TRIP</div>
+                <div class="annunciator green" data-title="UNIT 2 SYNCED" data-fix="INOP">UNIT 2
+                    SYNCED</div>
+                <div class="annunciator red" data-title="TRANSFORMER TROUBLE" data-fix="INOP">TRANSFORMER TROUBLE</div>
+                <div class="annunciator green" data-title="UNIT 2 ON DEMAND" data-fix="INOP">UNIT 2 ON DEMAND</div>
+
             </div>
         </div>
 
