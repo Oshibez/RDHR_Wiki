@@ -3,6 +3,8 @@ name: Generate and Deploy
 on:
   push:
     branches: ["main"]
+    paths:
+      - "**"
   workflow_dispatch:
 
 permissions:
