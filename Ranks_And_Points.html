@@ -24,7 +24,7 @@
     <div class="container">
 
         <div style="margin:20px 0;">
-            <button class="back-button" onclick="window.location.href='/index.html'">
+            <button class="back-button" onclick="window.location.href='/RHES_Wiki/index.html'">
                 ← Back
             </button>
         </div>
@@ -91,17 +91,31 @@
             <div class="pps-container">
                 <h3>Points Per Second Calculator</h3>
                 <div class="pps-checkboxes">
-                    <label><input type="checkbox" id="trashBox"> Trash Box Auto</label>
-                    <label><input type="checkbox" id="genTemp"> Generator Temp Auto</label>
-                    <label><input type="checkbox" id="turbineTemp"> Turbine Temp Auto</label>
-                    <label><input type="checkbox" id="hydraulicPump"> Hydraulic Pump Auto</label>
-                    <label><input type="checkbox" id="autoExcitation"> Auto Excitation</label>
+                    <label><input type="checkbox" id="trashBox" checked> Trash Box Auto</label>
+                    <label><input type="checkbox" id="genTemp" checked> Generator Temp Auto</label>
+                    <label><input type="checkbox" id="turbineTemp" checked> Turbine Temp Auto</label>
+                    <label><input type="checkbox" id="hydraulicPump" checked> Hydraulic Pump Auto</label>
+                    <label><input type="checkbox" id="autoExcitation" checked> Auto Excitation</label>
                     <label><input type="checkbox" id="tailwaterBonus"> Tailwater Bonus</label>
-                    <label><input type="checkbox" id="demandMet"> Demand Met</label>
+                    <label><input type="checkbox" id="demandMet" checked> Demand Met</label>
                 </div>
-                <!-- <button onclick="calculatePPS()">Calculate PPS</button> -->
-                <!-- <p id="ppsResult">Points per second: 0</p> -->
-                 <p><b>Temp disabled because i am too lazy to find real values. If anyone knows the values ping me in the discord.</b></p>
+                
+                <p id="ppsResult" style="font-weight: bold; font-size: 1.2rem; color: #ff5c5c; margin-bottom: 20px;">Points per second: 0.30/s</p>
+
+                <div style="border-top: 1px solid #333; padding-top: 15px; margin-top: 15px;">
+                    <h3 style="border: none; padding-bottom: 0;">Time to Target Calculator</h3>
+                    <div style="display: flex; gap: 15px; margin-bottom: 15px; flex-wrap: wrap;">
+                        <div>
+                            <label style="display: block; margin-bottom: 5px; font-size: 0.9rem;">Current Points:</label>
+                            <input type="number" id="currentPoints" value="0" min="0" style="padding: 8px; border-radius: 4px; border: 1px solid #333; background: #111; color: #fff; width: 120px;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 5px; font-size: 0.9rem;">Target Points:</label>
+                            <input type="number" id="targetPoints" value="500" min="0" style="padding: 8px; border-radius: 4px; border: 1px solid #333; background: #111; color: #fff; width: 120px;">
+                        </div>
+                    </div>
+                    <p id="timeResult" style="font-size: 1.1rem;">Time needed: 0s</p>
+                </div>
             </div>
         </div>
 
